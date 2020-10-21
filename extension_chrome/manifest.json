@@ -1,0 +1,34 @@
+{
+  "name": "Super Shield",
+  "version": "1.0",
+  "description": "Build a shield to protect children",
+  "permissions": ["activeTab", "declarativeContent", "tabs","webRequest","webRequestBlocking","<all_urls>"],
+  "options_page": "options.html",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "content_scripts":[
+      {
+          "matches": ["<all_urls>"],
+          "run_at": "document_start",
+          "js":["contentScript.js"]
+      }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/home_extensions.png",
+      "32": "images/home_extensions.png",
+      "48": "images/home_extensions.png",
+      "128": "images/home_extensions.png"
+    }
+  },
+  "icons": {
+    "16": "images/home_extensions.png",
+    "32": "images/home_extensions.png",
+    "48": "images/home_extensions.png",
+    "128": "images/home_extensions.png"
+  },
+  "manifest_version": 2
+}

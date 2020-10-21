@@ -1,0 +1,6 @@
+data_image
+crawler
+server_api/node_modules
+server_ai/model_ai/output
+server_ai/*/__pycache__
+.vscode
