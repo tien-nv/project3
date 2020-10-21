@@ -2,7 +2,7 @@
   "name": "Super Shield",
   "version": "1.0",
   "description": "Build a shield to protect children",
-  "permissions": ["activeTab", "declarativeContent", "tabs","webRequest","webRequestBlocking","<all_urls>"],
+  "permissions": ["storage","declarativeContent", "tabs","webRequest","webRequestBlocking","<all_urls>"],
   "options_page": "options.html",
   "background": {
     "scripts": ["background.js"],

@@ -1,11 +1,25 @@
 // define some api to use in extension
 var _console = chrome.extension.getBackgroundPage().console;
-
-
-
-
 var serverHost = 'http://127.0.0.1:8000';
 // var currentUrl = window.location.href;
+
+// chrome.windows.onCreated.addListener(function(window){
+//     // _console.log(window);
+// })
+
+
+chrome.tabs.onCreated.addListener(function (tab){
+    _console.log(tab);
+    chrome.storage.local.set(
+        {
+            tab_id: tab.id,
+            tab_url: tab.url
+        },
+        function(){
+            _console.log("saved infor of tab");
+        }    
+    );
+});
 
 chrome.runtime.onMessage.addListener(
     function (request, sender, sendResponse) {

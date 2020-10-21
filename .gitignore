@@ -3,4 +3,5 @@ crawler
 server_api/node_modules
 server_ai/model_ai/output
 server_ai/*/__pycache__
+server_ai/server_ai/settings.py
 .vscode
